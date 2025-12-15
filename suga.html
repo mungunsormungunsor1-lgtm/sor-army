@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTS Suga</title>
+<link rel="icon" href="BTS logo.jfif" type="img">
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#111;
+        color:#fff;
+    }
+    header{
+        background:#97079c;
+        padding:15px 25px;
+        font-size:25px;
+        font-weight:bold;
+    }
+    nav a{
+        color:white;
+        margin-right:30px;
+        margin-top: 15px;
+        text-decoration: none;
+        font-weight:bold;
+    }
+    nav :hover{
+        color: #97079c;
+    }
+    .box{
+        background:#222;
+        padding:25px;
+        width:1000px;
+        border-radius:5px;
+        text-align:justify;
+        border:2px solid #97079c;
+        margin-top: 10px;
+    }
+    .box a{
+        color:white;
+        text-decoration:none;
+        font-size:15px;
+    }
+</style>
+</head>
+<body>
+<header>BTS
+    <audio controls="controls" style="float: right; margin: -12px;">
+    <source src="SUGA Playlist.mp3" type="audio/mp3"></audio>
+</header>
+<nav style="padding: 20px; margin-top: 10px; margin-left: 20px;";> <!--tses solih-->
+    <a href="index.html">Нүүр хуудас</a>
+    <a href="debut.html">Дебют түүх</a>
+    <a href="rm.html">RM</a>
+    <a href="jin.html">Jin</a>
+    <a href="suga.html">Suga</a>
+    <a href="hope.html">J-Hope</a>
+    <a href="jimin.html">Jimin</a>
+    <a href="v.html">V</a>
+    <a href="jk.html">Jungkook</a>
+    <a href="amjilt.html">Амжилт</a>
+</nav>
+<div class="box" style="width: 365px; height: 650px; padding: 5px;">
+    <img src="suga.jfif" width="365px" height="650px">
+</div>
+<div class="box" style="width: 900px; height: 650px; margin-top: -664px; margin-left: 390px; padding: 5px; font-size: 18px;color: #d4d4d4;">
+<h4 style="text-align: center; text-decoration: underline;">Park Jimin</h4>
+    <ul style="font-size: 15px;">
+        <li>Төрсөн нэр: 박지민 / Пак Жимин</li>
+        <li>Тайзны нэр: Jimin / Жимин</li>
+        <li>Төрсөн он: 1995 оны 10 сарын 13</li>
+        <li>Гарал:	Өмнөд Солонгос, Пүсань</li>
+        <li>Мэргэжил: Дуучин, бүжигчин</lI>
+    </ul><hr>
+</div>
+<!--login end ehelne zayu-->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background:#222; color:white; border:2px ridge #97079c;">
+      <div class="modal-header">
+        <h5 class="modal-title">Нэвтрэх</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="username" class="form-control mb-3" placeholder="Нэвтрэх нэр">
+        <input type="password" id="password" class="form-control mb-3" placeholder="Нууц үг">
+        <div id="loginError" class="text-danger"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn w-100" style="background:#97079c; color:white;" onclick="login()">Нэвтрэх</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--2dh hseg n java zayu-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+  const error = document.getElementById("loginError");
+
+  if (user === "" || pass === "") {
+    error.innerText = "Бүх талбарыг бөглөнө үү";
+    return;
+  }
+
+  if (user === "army0709" && pass === "bts0613") {
+    alert("Амжилттай нэвтэрлээ 💜");
+
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById("loginModal")
+    );
+    modal.hide();
+  } else {
+    error.innerText = "Нэвтрэх нэр эсвэл нууц үг буруу";
+  }
+}
+</script>
+<!--login end duusna zayu-->
+</body>
+</html>

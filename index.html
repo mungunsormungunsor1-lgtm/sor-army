@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="mungunsor">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<title>BTS menu</title>
+<link rel="icon" href="BTS logo.jfif" type="img">
+<style>
+    body{
+        margin:0;
+        font-family: Arial, sans-serif;
+        background:#111111;
+        color:#fff;
+    }
+    header{
+        background:#97079c;
+        padding:15px 25px;
+        font-size:25px;
+        font-weight:bold;
+    }
+    nav a{
+        color:white;
+        margin-right:30px;
+        margin-top: 15px;
+        text-decoration: none;
+        font-weight:bold;
+    }
+    nav :hover{
+        color: #97079c;
+    }
+    .box{
+        background:#222;
+        padding:25px;
+        width:1000px;
+        border-radius:5px;
+        text-align:justify;
+        border:2px ridge #97079c;
+        margin-top: 10px;
+    }
+    .box a{
+        color:white;
+        text-decoration:none;
+        font-size:15px;
+    }
+.date-time{
+    position: absolute;
+    top: 80px;         
+    right: 30px;        
+    background: #222;
+    color: #97079c;
+    padding: 8px 14px;
+    border: 2px ridge #97079c;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<header>BTS
+    <audio controls="controls" style="float: right; margin: -12px;">
+    <source src="BTS playlist 2022.mp3" type="audio/mp3"></audio>
+</header>
+<div id="dateTime" class="date-time"></div>
+<nav style="padding: 20px; margin-top: 10px; margin-left: 20px;";> <!--tses solih-->
+    <a href="index.html">Нүүр хуудас</a>
+    <a href="debut.html">Дебют түүх</a>
+    <a href="rm.html">RM</a>
+    <a href="jin.html">Jin</a>
+    <a href="suga.html">Suga</a>
+    <a href="hope.html">J-Hope</a>
+    <a href="jimin.html">Jimin</a>
+    <a href="v.html">V</a>
+    <a href="jk.html">Jungkook</a>
+    <a href="amjilt.html">Амжилт</a>
+    <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Нэвтрэх</a>
+</nav>
+<div class="box" style="width: 750px; height: 370px; padding: 5px;">
+    <img src="bts lst grp.jfif" width="750px" height="370px">
+</div>
+<div class="box" style="width: 367px; height: 370px; margin-top: -384px; margin-left: 790px; padding: 5px;">
+    <ul>
+        <li><h5>Үндсэн нэр: 방탄소년단 /BTS/</h5></li>
+        <li><h5>Бусад нэр:	Bangtan Boys, Bangtan Sonyeondan</h5></li>
+        <li><h5>Дуулдаг хэл: Солонгос , Япон, Англи</h5></li>
+        <li><h5>Урсгал:	K-pop , Hip Hop, R&B , Dance</h5></li>
+        <li><h5>Entertainment: HYBE Label</h5></li>
+        <li><h5>Байгуулагдсан он: 2013 он</h5></li>
+        <li><h5>Гишүүд: RM, Jin, Suga, J-Hope, Jimin, V, Jungkook</h5></li>
+        <li><h5>Фэндом нэр: АРМИ</h5></li>
+    </ul>
+</div>
+<div class="box" style="padding: 10px; width: 1150px;">
+<a>Bangtan Boys (Бангтан-Сунёндан) буюу BTS нь долоон гишүүний бүрэлдэхүүнтэй Өмнөд Солонгосын хөвгүүдийн хамтлаг юм.</a>
+<a>Тус хамтлаг нь RM, Jin, Suga, J-Hope, Jimin, V, Jungkook гэсэн гишүүдээс бүрдэх ба бүх гишүүд хамтлагийнхаа дууны ая, үг, продюсерийн ажилд хамтарч ажилладаг. Анхандаа хип хоп хамтлаг байсан хэдий ч, жил ирэх тусам хөгжмийн хэв маяг нь хөгжсөөр, олон янзын төрлүүдээр уран бүтээлээ туурвидаг болсон. Ихэнхдээ хувийн болон нийгмийн сэдэв дээр төвлөрсөн тэдний дууны үг нь сэтгэцийн эрүүл мэнд, сургуулийн насны залуучуудын бэрхшээл, алдаа дутагдал, өөрийгөө хайрлах үзэл, хувь хүний үзэл санааны сэдвүүдийг хөндсөн байдаг.</a>
+</div>
+<!--login end ehelne zayu-->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background:#222; color:white; border:2px ridge #97079c;">
+      <div class="modal-header">
+        <h5 class="modal-title">Нэвтрэх</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" id="username" class="form-control mb-3" placeholder="Нэвтрэх нэр">
+        <input type="password" id="password" class="form-control mb-3" placeholder="Нууц үг">
+        <div id="loginError" class="text-danger"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn w-100" style="background:#97079c; color:white;" onclick="login()">Нэвтрэх</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--2dh hseg n java zayu-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+  const error = document.getElementById("loginError");
+
+  if (user === "" || pass === "") {
+    error.innerText = "Бүх талбарыг бөглөнө үү";
+    return;
+  }
+
+  if (user === "army0709" && pass === "bts0613") {
+    alert("Амжилттай нэвтэрлээ 💜");
+
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById("loginModal")
+    );
+    modal.hide();
+  } else {
+    error.innerText = "Нэвтрэх нэр эсвэл нууц үг буруу";
+  }
+}
+</script>
+<!--login end duusna zayu--><!--tsag-->
+<script>
+function updateDateTime(){
+    const n = new Date();
+    document.getElementById("dateTime").innerText =
+        n.getFullYear() + "/" +
+        String(n.getMonth()+1).padStart(2,'0') + "/" +
+        String(n.getDate()).padStart(2,'0') + " " +
+        String(n.getHours()).padStart(2,'0') + ":" +
+        String(n.getMinutes()).padStart(2,'0') + ":" +
+        String(n.getSeconds()).padStart(2,'0');
+}
+updateDateTime();
+setInterval(updateDateTime,1000);
+</script>
+<!--tsag-->
+</body>
+</html>
